@@ -3,9 +3,9 @@ package models.Helpers;
 public class Pair {
 
     private final int x;
-    private final int y;
+    private final char y;
 
-    public Pair(int x, int y) {
+    public Pair(int x, char y) {
         this.x = x;
         this.y = y;
     }
@@ -14,7 +14,7 @@ public class Pair {
         return x;
     }
 
-    public int getY() {
+    public char getY() {
         return y;
     }
 }

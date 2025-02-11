@@ -12,7 +12,7 @@ public class Cell {
     private Optional<ChessPiece> piece;
     private final Pair position;
 
-    public Cell(int x, int y) {
+    public Cell(int x, char y) {
         this.position = new Pair(x, y);
         this.piece = Optional.empty();
     }
@@ -41,7 +41,7 @@ public class Cell {
         return position.getX();
     }
 
-    public int getY() {
+    public char getY() {
         return position.getY();
     }
 

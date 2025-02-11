@@ -10,16 +10,18 @@ import java.util.List;
 
 public abstract class Piece {
     private final PieceName pieceName;
+    private final String pieceSymbol;
     private final Color color;
     private boolean killed;
     private List<Move> movesDone;
     protected List<MovementStrategy> movementStrategies;
 
-    public Piece(PieceName name, Color color) {
+    public Piece(PieceName name, Color color, String symbol) {
         this.killed = false;
         this.pieceName = name;
         this.color = color;
         this.movesDone = new ArrayList<>();
+        this.pieceSymbol = symbol;
     }
 
     public PieceName getPieceName() {
@@ -32,6 +34,14 @@ public abstract class Piece {
 
     public Color getColor() {
         return color;
+    }
+
+    public String getColorSymbol() {
+        return (this.getColor().equals(Color.BLACK)) ? "B" : "W";
+    }
+
+    public String getPieceSymbol() {
+        return this.pieceSymbol;
     }
 
     public boolean isKilled() {

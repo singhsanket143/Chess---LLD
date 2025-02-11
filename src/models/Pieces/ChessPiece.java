@@ -18,4 +18,6 @@ public interface ChessPiece {
     boolean isMovingForFirstTime();
 
     Color getColor();
+
+    String getPieceSymbol();
 }

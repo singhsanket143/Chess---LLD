@@ -11,8 +11,8 @@ import java.util.Arrays;
 
 public class Pawn extends Piece implements ChessPiece{
 
-    public Pawn(PieceName name, Color color) {
-        super(name, color);
+    public Pawn(PieceName name, Color color, String symbol) {
+        super(name, color, symbol);
         this.movementStrategies = Arrays.asList(new PawnVerticalMovementStrategy(), new DiagonalMovementStrategy());
     }
 
@@ -52,14 +52,14 @@ public class Pawn extends Piece implements ChessPiece{
 
     }
 
-    private boolean isDirectionValidForPawn(Direction direction) {
-        if(this.getColor().equals(Color.WHITE)) {
-            return direction.equals(Direction.FORWARD_Y) || direction.equals(Direction.DIAGONAL_FORWARD_LEFT) ||
-                    direction.equals(Direction.DIAGONAL_FORWARD_RIGHT);
-        } else {
-            return direction.equals(Direction.BACKWARD_Y) || direction.equals(Direction.DIAGONAL_BACKWARD_LEFT) ||
-                    direction.equals(Direction.DIAGONAL_BACKWARD_RIGHT);
-        }
-    }
+//    private boolean isDirectionValidForPawn(Direction direction) {
+//        if(this.getColor().equals(Color.WHITE)) {
+//            return direction.equals(Direction.FORWARD_Y) || direction.equals(Direction.DIAGONAL_FORWARD_LEFT) ||
+//                    direction.equals(Direction.DIAGONAL_FORWARD_RIGHT);
+//        } else {
+//            return direction.equals(Direction.BACKWARD_Y) || direction.equals(Direction.DIAGONAL_BACKWARD_LEFT) ||
+//                    direction.equals(Direction.DIAGONAL_BACKWARD_RIGHT);
+//        }
+//    }
 
 }
