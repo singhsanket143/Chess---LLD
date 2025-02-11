@@ -6,15 +6,16 @@ import models.Board.ChessBoard;
 import models.Helpers.Color;
 import models.Pieces.Strategy.DiagonalMovementStrategy;
 import models.Pieces.Strategy.HorizontalMovementStrategy;
+import models.Pieces.Strategy.PawnVerticalMovementStrategy;
 import models.Pieces.Strategy.VerticalMovementStrategy;
 
 import java.util.Arrays;
 
-public class Bishop extends Piece implements ChessPiece{
+public class Rook extends Piece implements ChessPiece{
 
-    public Bishop(PieceName name, Color color, String symbol) {
+    public Rook(PieceName name, Color color, String symbol) {
         super(name, color, symbol);
-        this.movementStrategies = Arrays.asList(new DiagonalMovementStrategy());
+        this.movementStrategies = Arrays.asList(new VerticalMovementStrategy(), new HorizontalMovementStrategy());
     }
 
     @Override
@@ -39,7 +40,7 @@ public class Bishop extends Piece implements ChessPiece{
             return true;
         }
 
-        throw new InvalidPieceMoveException("Invalid move for Bishop");
+        throw new InvalidPieceMoveException("Invalid move for Rook");
     }
 
     @Override

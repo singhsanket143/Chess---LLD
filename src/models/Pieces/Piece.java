@@ -1,6 +1,7 @@
 package models.Pieces;
 
 import models.Board.Cell;
+import models.Board.ChessBoard;
 import models.Helpers.Color;
 import models.Helpers.Direction;
 import models.Pieces.Strategy.MovementStrategy;
@@ -52,8 +53,8 @@ public abstract class Piece {
         this.killed = killed;
     }
 
-    protected boolean canMove(Cell start, Cell end) {
-        return movementStrategies.stream().anyMatch(strategy -> strategy.canMove(start, end));
+    protected boolean canMove(Cell start, Cell end, ChessBoard board) {
+        return movementStrategies.stream().anyMatch(strategy -> strategy.canMove(start, end, board));
     }
 
     protected boolean isMovingDiagonally(Cell startingCell, Cell endingCell) {
