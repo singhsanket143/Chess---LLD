@@ -85,14 +85,14 @@ public class BoardFactory {
         pieces.put(PieceName.PAWN6, new Pawn(PieceName.PAWN1, color, color.toString().substring(0, 1) + "P6"));
         pieces.put(PieceName.PAWN7, new Pawn(PieceName.PAWN1, color, color.toString().substring(0, 1) + "P7"));
         pieces.put(PieceName.PAWN8, new Pawn(PieceName.PAWN1, color, color.toString().substring(0, 1) + "P8"));
-        pieces.put(PieceName.KING, new Pawn(PieceName.KING, color, color.toString().substring(0, 1) + "K"));
+        pieces.put(PieceName.KING, new Pawn(PieceName.KING, color, color.toString().substring(0, 1) + "K1"));
         pieces.put(PieceName.ROOK1, new Pawn(PieceName.ROOK1, color, color.toString().substring(0, 1) + "R1"));
         pieces.put(PieceName.ROOK2, new Pawn(PieceName.ROOK2, color, color.toString().substring(0, 1) + "R2"));
         pieces.put(PieceName.KNIGHT1, new Pawn(PieceName.KNIGHT1, color, color.toString().substring(0, 1) + "N1"));
         pieces.put(PieceName.KNIGHT2, new Pawn(PieceName.KNIGHT2, color, color.toString().substring(0, 1) + "N2"));
         pieces.put(PieceName.BISHOP1, new Pawn(PieceName.BISHOP1, color, color.toString().substring(0, 1) + "B1"));
         pieces.put(PieceName.BISHOP2, new Pawn(PieceName.BISHOP2, color, color.toString().substring(0, 1) + "B2"));
-        pieces.put(PieceName.QUEEN, new Pawn(PieceName.QUEEN, color, color.toString().substring(0, 1) + "Q"));
+        pieces.put(PieceName.QUEEN, new Pawn(PieceName.QUEEN, color, color.toString().substring(0, 1) + "Q1"));
 
 //        pieces.put(PieceName.ROOK1, new Pawn(PieceName.ROOK1, color));
 //        pieces.put(PieceName.ROOK2, new Pawn(PieceName.ROOK2, color));
