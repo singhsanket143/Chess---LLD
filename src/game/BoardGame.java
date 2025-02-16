@@ -18,6 +18,4 @@ public abstract class BoardGame {
         // TODO: Implement start of game
     }
 
-
-
 }

@@ -1,6 +1,5 @@
 import game.BoardGame;
 import game.ChessGame;
-import models.Board.Board;
 import models.Board.ChessBoard;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
