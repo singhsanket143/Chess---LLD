@@ -28,7 +28,7 @@ public abstract class BoardGame {
             if(move == null) {
                 throw new Exception("Invalid Move");
             }
-            this.board.applyMove(move);
+            this.board.applyMove(move); // TODO: implement try catch for keeping the game going in case of wrong mvoe
 
             if(isGameOver()) {
                 System.out.println("Game Over");

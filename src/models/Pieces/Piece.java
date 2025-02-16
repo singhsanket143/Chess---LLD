@@ -13,7 +13,7 @@ public abstract class Piece {
     private final PieceName pieceName;
     private final String pieceSymbol;
     private final Color color;
-    private boolean killed;
+    protected boolean killed;
     private List<Move> movesDone;
     protected List<MovementStrategy> movementStrategies;
 

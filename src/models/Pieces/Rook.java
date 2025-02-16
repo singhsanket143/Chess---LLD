@@ -19,16 +19,6 @@ public class Rook extends Piece implements ChessPiece{
     }
 
     @Override
-    public void setKilled(boolean killed) {
-        this.setKilled(killed);
-    }
-
-    @Override
-    public boolean isKilled() {
-        return this.isKilled();
-    }
-
-    @Override
     public boolean canMove(Cell startingCell, Cell endingCell, ChessBoard board) {
 
         if(super.canMove(startingCell, endingCell, board)) {

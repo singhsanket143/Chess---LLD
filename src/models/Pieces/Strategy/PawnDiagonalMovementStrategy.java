@@ -7,6 +7,6 @@ public class PawnDiagonalMovementStrategy implements MovementStrategy{
 
     @Override
     public boolean canMove(Cell start, Cell end, ChessBoard board) {
-        return false; // todo
+        return true; // todo
     }
 }

@@ -18,17 +18,6 @@ public class Pawn extends Piece implements ChessPiece{
     }
 
 
-
-    @Override
-    public void setKilled(boolean killed) {
-        this.setKilled(killed);
-    }
-
-    @Override
-    public boolean isKilled() {
-        return this.isKilled();
-    }
-
     @Override
     public boolean canMove(Cell startingCell, Cell endingCell, ChessBoard board) {
         // 1. If this is the first move then pawn can move one step or two step
