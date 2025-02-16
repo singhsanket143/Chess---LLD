@@ -4,17 +4,17 @@ import exceptions.InvalidPieceMoveException;
 import models.Board.Cell;
 import models.Board.ChessBoard;
 import models.Helpers.Color;
+import models.Pieces.Strategy.DiagonalMovementStrategy;
 import models.Pieces.Strategy.HorizontalMovementStrategy;
-import models.Pieces.Strategy.KingMovementStrategy;
 import models.Pieces.Strategy.VerticalMovementStrategy;
 
 import java.util.Arrays;
 
-public class King extends Piece implements ChessPiece{
+public class Queen extends Piece implements ChessPiece{
 
-    public King(PieceName name, Color color, String symbol) {
+    public Queen(PieceName name, Color color, String symbol) {
         super(name, color, symbol);
-        this.movementStrategies = Arrays.asList(new KingMovementStrategy());
+        this.movementStrategies = Arrays.asList(new VerticalMovementStrategy(), new HorizontalMovementStrategy(), new DiagonalMovementStrategy());
     }
 
     @Override
@@ -39,7 +39,7 @@ public class King extends Piece implements ChessPiece{
             return true;
         }
 
-        throw new InvalidPieceMoveException("Invalid move for King");
+        throw new InvalidPieceMoveException("Invalid move for Queen");
     }
 
     @Override
