@@ -1,5 +1,6 @@
 import game.BoardGame;
 import game.ChessGame;
+import game.GameFactory;
 import models.Board.ChessBoard;
 import models.Helpers.Color;
 import models.Players.ChessPlayer;
@@ -12,11 +13,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        ChessBoard b = new ChessBoard();
-        ChessPlayer p1 = PlayerFactory.createPlayer("Alice", Color.WHITE, b);
-        ChessPlayer p2 = PlayerFactory.createPlayer("Bob", Color.BLACK, b);
-        BoardGame game = new ChessGame(b, p1, p2);
-//        game.showBoard();
+
+        BoardGame game = GameFactory.createNewChessGame();
         game.startGame();
     }
 }
