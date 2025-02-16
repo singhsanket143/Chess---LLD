@@ -6,7 +6,7 @@ import models.Helpers.Color;
 
 public interface ChessPiece {
 
-    void makeMove(Cell startingCell, Cell endingCell);
+    void makeMove(Cell startingCell, Cell endingCell, ChessBoard board);
 
     void setKilled(boolean killed);
 

@@ -17,10 +17,6 @@ public class King extends Piece implements ChessPiece{
         this.movementStrategies = Arrays.asList(new KingMovementStrategy());
     }
 
-    @Override
-    public void makeMove(Cell startingCell, Cell endingCell) {
-
-    }
 
     @Override
     public void setKilled(boolean killed) {

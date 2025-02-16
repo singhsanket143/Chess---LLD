@@ -53,6 +53,20 @@ public abstract class Piece {
         this.killed = killed;
     }
 
+    public void makeMove(Cell startingCell, Cell endingCell, ChessBoard board) {
+
+        // 1. We should remove the piece from the current cell
+        ChessPiece currentPiece = startingCell.getPiece().get();
+        startingCell.removePiece();
+
+        // 2. We should add the piece to the ending cell and if there was a piece on the ending cell we should kill it
+        if(endingCell.getPiece().isPresent()) {
+            ChessPiece endingPiece = endingCell.getPiece().get();
+            endingPiece.setKilled(true);
+        }
+        endingCell.setPiece(currentPiece);
+    }
+
     protected boolean canMove(Cell start, Cell end, ChessBoard board) {
         return movementStrategies.stream().anyMatch(strategy -> strategy.canMove(start, end, board));
     }

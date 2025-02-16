@@ -27,6 +27,10 @@ public abstract class ChessPlayer extends Player {
     }
 
     public ChessPiece getPiece(PieceName pieceName) {
+        if(pieces.containsKey(pieceName) && pieces.get(pieceName).isKilled()) {
+            pieces.remove(pieceName); // lazy deletion
+        }
+
         if(!pieces.containsKey(pieceName)) {
             throw new IllegalArgumentException("Piece not found");
         }

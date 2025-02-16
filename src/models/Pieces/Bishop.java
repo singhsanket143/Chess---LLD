@@ -18,11 +18,6 @@ public class Bishop extends Piece implements ChessPiece{
     }
 
     @Override
-    public void makeMove(Cell startingCell, Cell endingCell) {
-
-    }
-
-    @Override
     public void setKilled(boolean killed) {
         this.setKilled(killed);
     }

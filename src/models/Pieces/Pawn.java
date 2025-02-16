@@ -17,10 +17,7 @@ public class Pawn extends Piece implements ChessPiece{
         this.movementStrategies = Arrays.asList(new PawnVerticalMovementStrategy(this), new DiagonalMovementStrategy());
     }
 
-    @Override
-    public void makeMove(Cell startingCell, Cell endingCell) {
 
-    }
 
     @Override
     public void setKilled(boolean killed) {
