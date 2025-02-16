@@ -14,10 +14,23 @@ import java.util.Map;
 
 public class BoardFactory {
 
-    public static void prepareBoardByPlacingPieces(ChessBoard board) {
-        Map<PieceName, ChessPiece> whitePieces = getPieces(Color.WHITE);
-        Map<PieceName, ChessPiece> blackPieces = getPieces(Color.BLACK);
+    public static Map<PieceName, ChessPiece> whitePieces;
+    public static Map<PieceName, ChessPiece> blackPieces;
 
+    public static Map<PieceName, ChessPiece> prepareWhitePieces() {
+        whitePieces = getPieces(Color.WHITE);
+        return whitePieces;
+    }
+
+    public static Map<PieceName, ChessPiece> prepareBlackPieces() {
+        blackPieces = getPieces(Color.BLACK);
+        return blackPieces;
+    }
+
+    public static void prepareBoardByPlacingPieces(ChessBoard board) {
+        if(whitePieces == null || blackPieces == null) {
+            throw new IllegalStateException("Pieces not initialized");
+        }
         placePawns(board, whitePieces, Color.WHITE); // place white pawns
         placePawns(board, blackPieces, Color.BLACK); // place black pawns
         placeRooks(board, whitePieces, Color.WHITE); // place white rooks
